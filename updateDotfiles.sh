@@ -8,4 +8,5 @@ for file in $(find ${repo} -name ".*" -type f -exec basename {} \;); do
     ln -sf ${repo}/${file} ${HOME}/${file}
 done;
 
-sh <( curl https://raw.github.com/TimeIPS/spf13-vim/3.0/bootstrap.sh -L )
+# Commenting out for testing. TODO put this back.
+#sh <( curl https://raw.github.com/TimeIPS/spf13-vim/3.0/bootstrap.sh -L )
