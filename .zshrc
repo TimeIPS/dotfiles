@@ -51,5 +51,5 @@ bindkey -e
 
 . ~/.aliases
 
-[ -e ~/.aliases.remote ] && . ~/.aliases.remote || true
-[ -e ~/.zshrc.remote ] && . ~/.zshrc.remote || true
+[ -e ~/.aliases.local ] && . ~/.aliases.local || true
+[ -e ~/.zshrc.local ] && . ~/.zshrc.local || true
