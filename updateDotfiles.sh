@@ -4,7 +4,7 @@ repo=${HOME}/.dotfiles
 cd $repo
 git pull origin master
 
-for file in $(find ${repo} -name ".*" -type f -exec basename {} \;); do
+for file in $(find . -maxdepth 1 -name ".*" -not -name ".git" -not -name "." -exec basename {} \;); do
     ln -sf ${repo}/${file} ${HOME}/${file}
 done;
 
