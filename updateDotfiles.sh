@@ -5,7 +5,7 @@ cd $repo
 git pull origin master
 
 for file in $(find . -maxdepth 1 -name ".*" -not -name ".git" -not -name "." -exec basename {} \;); do
-    ln -sf ${repo}/${file} ${HOME}/${file}
+    ln -sf ${repo}/${file} ${HOME}/
 done;
 
 # Commenting out for testing. TODO put this back.
