@@ -9,13 +9,6 @@
 		},
 		"date": {
 			"before": "⌚ "
-		},
-		"email_imap_alert": {
-			"before": "✉ ",
-			"args": {
-				"username": "",
-				"password": ""
-			}
 		}
 	},
 	"segments": {
@@ -37,10 +30,6 @@
 				"priority": 50
 			},
 			{
-				"name": "weather",
-				"priority": 50
-			},
-			{
 				"name": "date"
 			},
 			{
@@ -49,10 +38,6 @@
 					"format": "%H:%M",
 					"istime": true
 				}
-			},
-			{
-				"name": "email_imap_alert",
-				"priority": 10
 			},
 			{
 				"name": "hostname"
