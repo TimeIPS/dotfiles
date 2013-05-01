@@ -3,6 +3,8 @@
 # Source global definitions
 [ -e ~/etc/bashrc ] && . ~/etc/bashrc || true
 
+export EDITOR="/usr/bin/vim"
+
 # Add local python stuff to our PATH
 export PATH="${PATH}:${HOME}/.local/bin/"
 
