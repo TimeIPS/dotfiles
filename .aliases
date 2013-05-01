@@ -1,4 +1,12 @@
+# Safe mode
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
+
+# ls options
+alias ls='ls --color=auto --group-directories-first'
+alias ll='ls -l'
+alias la='ls -lA'
+
+# Force tmux to honor 256 colors
 alias tmux='tmux -2'
