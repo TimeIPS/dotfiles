@@ -8,5 +8,8 @@ alias ls='ls --color=auto --group-directories-first'
 alias ll='ls -l'
 alias la='ls -lA'
 
+# Shortcut to update dotfiles
+alias updateDotfiles="${HOME}/.dotfiles/updateDotfiles.sh"
+
 # Force tmux to honor 256 colors
 alias tmux='tmux -2'
