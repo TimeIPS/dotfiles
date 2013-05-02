@@ -6,12 +6,6 @@
 		},
 		"external_ip": {
 			"before": "ⓦ  "
-		},
-		"environment": {
-			"after": " ",
-			"args": {
-				"variable": "TIMEIPS_CUSTOMER"
-			}
 		}
 	},
 	"segments": {
@@ -33,7 +27,17 @@
 				"priority": 50
 			},
 			{
-				"name": "environment"
+				"name": "environment",
+				"args": {
+					"variable": "TIMEIPS_PORT"
+				}
+			},
+			{
+				"name": "environment",
+				"after": " ",
+				"args": {
+					"variable": "TIMEIPS_CUSTOMER"
+				}
 			}
 		]
 	}
