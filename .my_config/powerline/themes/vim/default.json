@@ -3,6 +3,12 @@
 		"branch": {
 			"before": " "
 		},
+		"environment": {
+			"after": " ",
+			"args": {
+				"variable": "TIMEIPS_CUSTOMER"
+			}
+		},
 		"modified_indicator": {
 			"args": { "text": "+" }
 		},
@@ -102,6 +108,11 @@
 				"before": ":",
 				"width": 3,
 				"align": "l"
+			},
+			{
+				"module": "powerline.segments.common",
+				"name": "environment",
+				"priority": 90
 			}
 		]
 	}

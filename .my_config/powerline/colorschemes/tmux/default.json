@@ -1,5 +1,5 @@
 {
-	"name": "Default color scheme for window managers",
+	"name": "Default color scheme for terminal prompts",
 	"groups": {
 		"background:divider": { "fg": "gray5", "bg": "gray0" },
 		"session": { "fg": "black", "bg": "gray10", "attr": ["bold"] },
@@ -17,9 +17,9 @@
 		"uptime": { "fg": "gray8", "bg": "gray0" },
 		"external_ip": { "fg": "gray8", "bg": "gray0" },
 		"network_load": { "fg": "gray8", "bg": "gray0" },
+		"network_load_gradient": { "fg": "green_yellow_orange_red", "bg": "gray0" },
 		"system_load": { "fg": "gray8", "bg": "gray0" },
-		"system_load_good": { "fg": "lightyellowgreen", "bg": "gray0" },
-		"system_load_bad": { "fg": "gold3", "bg": "gray0" },
-		"system_load_ugly": { "fg": "orangered", "bg": "gray0" }
+		"system_load_gradient": { "fg": "green_yellow_orange_red", "bg": "gray0" },
+		"environment": { "fg": "white", "bg": "darkestgreen" }
 	}
 }

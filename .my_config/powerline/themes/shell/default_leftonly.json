@@ -1,14 +1,11 @@
 {
 	"default_module": "powerline.segments.common",
 	"segment_data": {
-		"hostname": {
+		"environment": {
 			"before": " ",
 			"args": {
-				"only_if_ssh": true
+				"variable": "TIMEIPS_CUSTOMER"
 			}
-		},
-		"virtualenv": {
-			"before": "ⓔ  "
 		},
 		"branch": {
 			"before": " "
@@ -17,13 +14,7 @@
 	"segments": {
 		"left": [
 			{
-				"name": "hostname"
-			},
-			{
-				"name": "user"
-			},
-			{
-				"name": "virtualenv"
+				"name": "environment"
 			},
 			{
 				"name": "branch"
