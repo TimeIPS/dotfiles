@@ -19,6 +19,9 @@ export POWERLINE_CONFIG_HOME="${HOME}/.my_config"
 # Get a powerline prompt
 . ${HOME}/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
 
+# Customize the mysql client prompt
+export MYSQL_PS1="mysql  \d  \R:\m:\s  "
+
 # Source in aliases
 . ~/.aliases
 
