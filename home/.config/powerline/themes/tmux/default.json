@@ -2,7 +2,7 @@
 	"default_module": "powerline.segments.common",
 	"segment_data": {
 		"uptime": {
-			"before": "⇑  "
+			"before": "Up "
 		},
 		"external_ip": {
 			"before": "ⓦ  "

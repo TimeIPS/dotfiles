@@ -12,15 +12,23 @@ export TERM="xterm-256color"
 # Add local python stuff like the powerline executable to our PATH
 export PATH="${PATH}:${HOME}/.local/bin/"
 
-# Instead of conflicting with ~/.config we are going to define our own config
-# stuff in ~/.my_config
-export POWERLINE_CONFIG_HOME="${HOME}/.my_config"
-
-# Get a powerline prompt
-. ${HOME}/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+if [ ! -z "$SSH_TTY" ]; then
+    # Get a powerline prompt
+    . ${HOME}/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+    export VIMINIT="source /root/.vimrc"
+else
+    export PS1="\u \w $ "
+    export VIMINIT="source /root/.vimrc.warehouse"
+fi
 
 # Customize the mysql client prompt
 export MYSQL_PS1="mysql  \d  \R:\m:\s  "
+
+# Improve history
+shopt -s histappend
+HISTSIZE=1000
+HISTFILESIZE=2000
+HISTTIMEFORMAT="%F %T "
 
 # Source in aliases
 . ~/.aliases
