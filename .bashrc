@@ -14,7 +14,8 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 
 # Instead of conflicting with ~/.config we are going to define our own config
 # stuff in ~/.my_config
-export XDG_CONFIG_HOME="${HOME}/.my_config"
+export XDG_CONFIG_HOME="${HOME}/.config"
+export XDG_CONFIG_DIRS="${HOME}/.my_config:/etc/xdg"
 
 # Get a powerline prompt
 . ${HOME}/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
