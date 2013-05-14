@@ -17,8 +17,23 @@ export PATH="${PATH}:${HOME}/.local/bin/"
 export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_CONFIG_DIRS="${HOME}/.my_config:/etc/xdg"
 
-# Get a powerline prompt
-. ${HOME}/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+if [ ! -z "$SSH_TTY" ]; then
+    # Get a powerline prompt
+    . ${HOME}/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
+    export VIMINIT="source /root/.vimrc"
+else
+    export PS1="\u \w $ "
+    export VIMINIT="source /root/.vimrc.warehouse"
+fi
+
+# Customize the mysql client prompt
+export MYSQL_PS1="mysql  \d  \R:\m:\s  "
+
+# Improve history
+shopt -s histappend
+HISTSIZE=1000
+HISTFILESIZE=2000
+HISTTIMEFORMAT="%F %T "
 
 # Source in aliases
 . ~/.aliases
