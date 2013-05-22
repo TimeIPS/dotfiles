@@ -21,7 +21,10 @@
 				}
 			},
 			{
-				"name": "branch"
+				"name": "branch",
+                                "args": {
+                                    "status_colors": true
+                                }
 			},
 			{
 				"name": "cwd",
