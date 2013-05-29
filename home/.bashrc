@@ -20,10 +20,10 @@ export XDG_CONFIG_DIRS="${HOME}/.my_config:/etc/xdg"
 if [ ! -z "$SSH_TTY" ]; then
     # Get a powerline prompt
     . ${HOME}/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
-    export VIMINIT="source /root/.vimrc"
+    export VIMINIT="source ~/.vimrc"
 else
     export PS1="\u \w $ "
-    export VIMINIT="source /root/.vimrc.warehouse"
+    export VIMINIT="source ~/.vimrc.warehouse"
 fi
 
 # Customize the mysql client prompt
