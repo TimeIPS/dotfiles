@@ -16,6 +16,13 @@
 			},
 			{
 				"name": "environment",
+				"before": " ",
+				"args": {
+					"variable": "TIMEIPS_RECOVERY"
+				}
+			},
+			{
+				"name": "environment",
 				"args": {
 					"variable": "TIMEIPS_PORT"
 				}

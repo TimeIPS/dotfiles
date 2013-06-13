@@ -6,9 +6,6 @@
 # This needs to be set for tmuxinator and besides, it's just a good idea :)
 export EDITOR="/usr/bin/vim"
 
-# Set TERM so tmux is pretty
-export TERM="xterm-256color"
-
 # Add local python stuff like the powerline executable to our PATH
 export PATH="${PATH}:${HOME}/.local/bin/"
 
@@ -18,10 +15,12 @@ export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_CONFIG_DIRS="${HOME}/.my_config:/etc/xdg"
 
 if [ ! -z "$SSH_TTY" ]; then
+    export TERM="xterm-256color"
     # Get a powerline prompt
     . ${HOME}/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
     export VIMINIT="source ~/.vimrc"
 else
+    export TERM="xterm"
     export PS1="\u \w $ "
     export VIMINIT="source ~/.vimrc.warehouse"
 fi
