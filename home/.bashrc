@@ -9,6 +9,8 @@ export EDITOR="/usr/bin/vim"
 # Add local python stuff like the powerline executable to our PATH
 export PATH="${PATH}:${HOME}/.local/bin/"
 
+export PATH="${PATH}:${HOME}/bin/"
+
 # Instead of conflicting with ~/.config we are going to define our own config
 # stuff in ~/.my_config
 export XDG_CONFIG_HOME="${HOME}/.config"
