@@ -8,5 +8,5 @@ tabs:
   - Logs:
       layout: main-vertical
       panes:
-        - tail -F /var/www/error/php.log
-        - tail -F /var/www/error/ajax.log
+        - tail -F /var/log/tips/php.log
+        - tail -F /var/log/tips/ajax.log
