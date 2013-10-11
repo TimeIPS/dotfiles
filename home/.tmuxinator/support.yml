@@ -10,3 +10,4 @@ tabs:
       panes:
         - tail -F /var/log/tips/php.log
         - tail -F /var/log/tips/ajax.log
+        - top
