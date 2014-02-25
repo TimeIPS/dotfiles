@@ -18,12 +18,12 @@ export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_CONFIG_DIRS="${HOME}/.my_config:/etc/xdg"
 
 if [ ! -z "$SSH_TTY" ]; then
-    export TERM="xterm-256color"
+    export TERM="screen-256color"
     # Get a powerline prompt
     . ${HOME}/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
     export VIMINIT="source ~/.vimrc"
 else
-    export TERM="xterm"
+    export TERM="screen"
     export PS1="\u \w $ "
     export VIMINIT="source ~/.vimrc.warehouse"
 fi
