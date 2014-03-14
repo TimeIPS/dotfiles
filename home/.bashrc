@@ -17,13 +17,12 @@ export PATH="${PATH}:${HOME}/bin/"
 export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_CONFIG_DIRS="${HOME}/.my_config:/etc/xdg"
 
-if [ ! -z "$SSH_TTY" ]; then
-    export TERM="screen-256color"
-    # Get a powerline prompt
+# If you're using a 256 color terminal then you get a powerline prompt and an
+# expanded vim config. Otherwise you get a minimally functional shell.
+if [[ $TERM == *256* ]]; then
     . ${HOME}/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
     export VIMINIT="source ~/.vimrc"
 else
-    export TERM="screen"
     export PS1="\u \w $ "
     export VIMINIT="source ~/.vimrc.warehouse"
 fi
