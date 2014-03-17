@@ -13,3 +13,6 @@ alias updateDotfiles="${HOME}/.dotfiles/updateDotfiles.sh"
 
 # Force tmux to honor 256 colors
 alias tmux='tmux -2'
+
+# Force vi => vim for old habits
+alias vi='vim'
