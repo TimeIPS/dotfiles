@@ -28,7 +28,7 @@ else
 fi
 
 # Customize the mysql client prompt
-export MYSQL_PS1="mysql  \d  \R:\m:\s  "
+export MYSQL_PS1="mysql › \d › \R:\m:\s › "
 
 # Improve history
 shopt -s histappend
