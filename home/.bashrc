@@ -17,13 +17,11 @@ export PATH="${PATH}:${HOME}/bin/"
 export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_CONFIG_DIRS="${HOME}/.my_config:/etc/xdg"
 
-# If you're using a 256 color terminal then you get a powerline prompt and an
-# expanded vim config. Otherwise you get a minimally functional shell.
+# If you're using a 256 color terminal you get an expanded vim config,
+# otherwise you get a minimally functional version.
 if [[ $TERM == *256* ]]; then
-    . ${HOME}/.local/lib/python2.7/site-packages/powerline/bindings/bash/powerline.sh
     export VIMINIT="source ~/.vimrc"
 else
-    export PS1="\u \w $ "
     export VIMINIT="source ~/.vimrc.warehouse"
 fi
 
@@ -38,6 +36,31 @@ HISTTIMEFORMAT="%F %T "
 
 # Source in aliases
 . ~/.aliases
+
+# Source in the git prompt util provided in git core
+source /usr/share/git-core/contrib/completion/git-prompt.sh
+GIT_PS1_SHOWDIRTYSTATE=true
+GIT_PS1_SHOWSTASHSTATE=true
+GIT_PS1_SHOWUNTRACKEDFILES=true
+GIT_PS1_SHOWCOLORHINTS=true
+
+# Define a function for our PS1 prompt
+__timeips_ps1() {
+    bold=`tput bold`
+    normal=`tput sgr0`
+
+    local ps1="  ${bold}${TIMEIPS_CUSTOMER}${normal} ᐳ"
+    if [ "" != "${TIMEIPS_PORT}" ]; then
+        ps1="${ps1} ${TIMEIPS_PORT} ᐳ"
+    fi
+    ps1="${ps1} \w ᐳ"
+
+    # Call __git_ps1 with 2 arguments: what to print before the git info and
+    # what to print after
+    __git_ps1 "${ps1}" " "
+}
+
+PROMPT_COMMAND='__timeips_ps1'
 
 # Hook in to user specific configs that have been pushed up by different users
 [ -e ~/.bashrc.local ] && . ~/.bashrc.local || true
