@@ -46,8 +46,8 @@ GIT_PS1_SHOWCOLORHINTS=true
 
 # Define a function for our PS1 prompt
 __timeips_ps1() {
-    bold=`tput bold`
-    normal=`tput sgr0`
+    bold="\["$(tput bold)"\]"
+    normal="\["$(tput sgr0)"\]"
 
     local ps1="  ${bold}${TIMEIPS_CUSTOMER}${normal} ᐳ"
     if [ "" != "${TIMEIPS_PORT}" ]; then
