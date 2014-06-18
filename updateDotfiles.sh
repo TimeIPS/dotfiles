@@ -33,4 +33,4 @@ git pull origin master
 linkdir $repo/home $HOME
 
 # Update our vim configuration
-bash <( curl https://raw.github.com/TimeIPS/spf13-vim/3.0/bootstrap.sh -L )
+bash <( curl https://raw.githubusercontent.com/TimeIPS/spf13-vim/3.0/bootstrap.sh -L )
