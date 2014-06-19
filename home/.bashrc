@@ -26,7 +26,7 @@ else
 fi
 
 # Customize the mysql client prompt
-export MYSQL_PS1="mysql ᐳ \d ᐳ \R:\m:\s ᐳ "
+export MYSQL_PS1="mysql > \d > \R:\m:\s > "
 
 # Improve history
 shopt -s histappend
@@ -49,11 +49,11 @@ __timeips_ps1() {
     bold="\["$(tput bold)"\]"
     normal="\["$(tput sgr0)"\]"
 
-    local ps1="  ${bold}${TIMEIPS_CUSTOMER}${normal} ᐳ"
+    local ps1="  ${bold}${TIMEIPS_CUSTOMER}${normal} >"
     if [ "" != "${TIMEIPS_PORT}" ]; then
-        ps1="${ps1} ${TIMEIPS_PORT} ᐳ"
+        ps1="${ps1} ${TIMEIPS_PORT} >"
     fi
-    ps1="${ps1} \w ᐳ"
+    ps1="${ps1} \w >"
 
     # Call __git_ps1 with 2 arguments: what to print before the git info and
     # what to print after
