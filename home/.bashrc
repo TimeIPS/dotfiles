@@ -46,8 +46,16 @@ GIT_PS1_SHOWCOLORHINTS=true
 
 # Define a function for our PS1 prompt
 __timeips_ps1() {
-    bold="\["$(tput bold)"\]"
-    normal="\["$(tput sgr0)"\]"
+    lastCommandStatus=$?
+
+    local bold="\["$(tput bold)"\]"
+    local yellowFG="\["$(tput setaf 3)"\]"
+    local normal="\["$(tput sgr0)"\]"
+
+    local statusMsg=""
+    if [[ $lastCommandStatus -ne 0 ]]; then
+        statusMsg=" (Error ${bold}${yellowFG}${lastCommandStatus}${normal})"
+    fi
 
     local ps1="  ${bold}${TIMEIPS_CUSTOMER}${normal} >"
     if [ "" != "${TIMEIPS_PORT}" ]; then
@@ -57,7 +65,7 @@ __timeips_ps1() {
 
     # Call __git_ps1 with 2 arguments: what to print before the git info and
     # what to print after
-    __git_ps1 "${ps1}" " "
+    __git_ps1 "${ps1}" "${statusMsg} "
 }
 
 PROMPT_COMMAND='__timeips_ps1'
